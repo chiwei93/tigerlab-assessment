@@ -1,0 +1,33 @@
+.linkContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link {
+  color: var(--color-black);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.underline {
+  height: 3px;
+  width: 100%;
+  background-color: var(--color-primary);
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+
+.link:hover ~ .underline {
+  transform: scaleX(1);
+}
+
+@media only screen and (max-width: 700px) {
+  .link {
+    color: var(--color-white);
+  }
+
+  .underline {
+    background-color: var(--color-white);
+  }
+}

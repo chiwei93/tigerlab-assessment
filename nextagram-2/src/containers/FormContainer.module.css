@@ -1,0 +1,31 @@
+.formContainer {
+  width: 80%;
+}
+
+@media only screen and (max-width: 700px) {
+  .formContainer {
+    background-color: white;
+    padding: 2rem 3rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.5rem 1rem var(--color-shadow);
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .formContainer {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .formContainer {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .formContainer {
+    width: 60%;
+  }
+}

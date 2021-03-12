@@ -1,0 +1,54 @@
+.btnBack {
+  border: none;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  position: fixed;
+  right: 5rem;
+  bottom: 7rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.btnBack:hover {
+  filter: brightness(1.2);
+}
+
+.btnBack:hover::after {
+  content: "Back to top";
+  position: absolute;
+  bottom: 0;
+  color: var(--color-primary);
+  transform: translateY(130%);
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .btnBack {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+  }
+
+  .btnBack:hover {
+    background-color: var(--color-gray);
+    color: var(--color-white);
+  }
+
+  .btnBack:hover::after {
+    color: var(--color-white);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .btnBack {
+    right: 2rem;
+    bottom: 4rem;
+  }
+}
