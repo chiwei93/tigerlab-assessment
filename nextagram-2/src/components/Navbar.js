@@ -14,6 +14,7 @@ const Navbar = () => {
     setIsSignUpPage,
     showDropdown,
     setShowDropdown,
+    setCurrentUserId,
   } = useGlobalContext();
 
   //set active class
@@ -29,6 +30,7 @@ const Navbar = () => {
   const onBtnLogoutClick = () => {
     setIsSignedIn(false);
     setShowDropdown(false);
+    setCurrentUserId(null);
 
     //notify user
     toast.success("You had successfully logged out!", {
@@ -43,6 +45,7 @@ const Navbar = () => {
 
     //remove token from local storage
     localStorage.removeItem("auth_token");
+    localStorage.removeItem("currentUserId");
   };
 
   //render this navbar when not signed in
@@ -116,10 +119,14 @@ const Navbar = () => {
         onClick={(e) => e.stopPropagation()}
       >
         <li className={nav.navItem}>
-          <NavLink path="/users">Home</NavLink>
+          <NavLink path="/users" onClick={() => setShowDropdown(false)}>
+            Home
+          </NavLink>
         </li>
         <li className={nav.navItem}>
-          <NavLink path="/profile">My Profile</NavLink>
+          <NavLink path="/profile" onClick={() => setShowDropdown(false)}>
+            My Profile
+          </NavLink>
         </li>
         <li className={nav.navItem}>
           <NavLink path="/" onClick={onBtnLogoutClick}>

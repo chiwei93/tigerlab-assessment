@@ -7,7 +7,14 @@ const UserCard = React.forwardRef(
   ({ id, profileImage, images, username, index }, ref) => {
     const renderImages = () => {
       return images.map((image, index) => {
-        return <ImageCard src={image.url} index={index} key={image.id} />;
+        return (
+          <ImageCard
+            src={image.url}
+            index={index}
+            key={image.id}
+            id={image.id}
+          />
+        );
       });
     };
 

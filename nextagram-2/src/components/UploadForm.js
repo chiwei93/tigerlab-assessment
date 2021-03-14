@@ -40,7 +40,7 @@ const UploadForm = () => {
     try {
       setLoading(true);
 
-      const response = await nextagram.post("/images/", data, {
+      await nextagram.post("/images/", data, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

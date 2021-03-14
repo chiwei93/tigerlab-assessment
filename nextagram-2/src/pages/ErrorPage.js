@@ -4,7 +4,7 @@ import { useGlobalContext } from "../components/context";
 import errorPage from "./ErrorPage.module.css";
 
 const ErrorPage = () => {
-  const { setIsSignedIn } = useGlobalContext();
+  const { setIsSignedIn, isSignedIn } = useGlobalContext();
 
   //check whether the user is signed in or not when it first render
   useEffect(() => {
@@ -14,6 +14,21 @@ const ErrorPage = () => {
       setIsSignedIn(true);
     }
   }, []);
+
+  if (!isSignedIn) {
+    return (
+      <div className={errorPage.pageContainer}>
+        Please Sign in to your account or sign up to an account if you don't
+        have one yet.
+        <Link to="/" className={errorPage.btnHome}>
+          Log In
+        </Link>
+        <Link to="/" className={errorPage.btnHome}>
+          Sign Up
+        </Link>
+      </div>
+    );
+  }
 
   return (
     <div className={errorPage.pageContainer}>

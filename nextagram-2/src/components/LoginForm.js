@@ -10,7 +10,7 @@ import nextagram from "../api/nextagram";
 import { useGlobalContext } from "./context";
 
 const LoginForm = () => {
-  const { setIsSignedIn, setLoading } = useGlobalContext();
+  const { setIsSignedIn, setLoading, setCurrentUserId } = useGlobalContext();
 
   const history = useHistory();
 
@@ -19,7 +19,7 @@ const LoginForm = () => {
 
   //for username inputfield
   const onUsernameInputChange = (event) => {
-    const input = event.target.value;
+    const input = event.target.value.trim();
 
     const isValid = checkUsername(input);
 
@@ -28,7 +28,7 @@ const LoginForm = () => {
 
   //for passowrd inputfield
   const onPasswordInputChange = (event) => {
-    const input = event.target.value;
+    const input = event.target.value.trim();
 
     const isValid = checkPassword(input);
 
@@ -46,11 +46,17 @@ const LoginForm = () => {
 
       const { auth_token } = response.data;
 
+      const id = response.data.user.id;
+
       //set signed in state
       setIsSignedIn(true);
 
+      setCurrentUserId(id);
+
       //save to local storage
       localStorage.setItem("auth_token", auth_token);
+
+      localStorage.setItem("currentUserId", id);
 
       //notify user
       toast.success("Welcome Back", {

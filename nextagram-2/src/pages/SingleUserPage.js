@@ -17,10 +17,18 @@ const SingleUserPage = (props) => {
 
   const { id } = props.match.params;
 
-  const { setLoading, loading, setIsSignedIn } = useGlobalContext();
+  const {
+    setLoading,
+    loading,
+    setIsSignedIn,
+    setCurrentUserId,
+    isSignedIn,
+  } = useGlobalContext();
 
   //check whether signed in
   useEffect(() => {
+    setCurrentUserId(localStorage.getItem("currentUserId"));
+
     const auth_token = localStorage.getItem("auth_token");
 
     if (auth_token) {
@@ -71,12 +79,19 @@ const SingleUserPage = (props) => {
 
   const renderImages = () => {
     return images.map((image, index) => {
-      return <ImageCard key={index} src={image.url} index={index} />;
+      return (
+        <ImageCard key={index} src={image.url} index={index} id={image.id} />
+      );
     });
   };
 
   if (loading) {
     return <Loading />;
+  }
+
+  if (!isSignedIn) {
+    history.push("/error");
+    return null;
   }
 
   return (

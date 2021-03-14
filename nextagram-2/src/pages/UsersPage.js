@@ -1,4 +1,5 @@
 import React, { useState, useRef, useCallback, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import UseFetchUsers from "../components/UseFetchUsers";
 import UserCard from "../components/UserCard";
 import { useGlobalContext } from "../components/context";
@@ -8,7 +9,9 @@ const UsersPage = () => {
   const [pageNumber, setPageNumber] = useState(1);
   const { users, usersPageLoading, error, hasMore } = UseFetchUsers(pageNumber);
 
-  const { setIsSignedIn } = useGlobalContext();
+  const { setIsSignedIn, isSignedIn } = useGlobalContext();
+
+  const history = useHistory();
 
   //check signed in
   useEffect(() => {
@@ -104,6 +107,11 @@ const UsersPage = () => {
 
     return null;
   };
+
+  if (!isSignedIn) {
+    history.push("/error");
+    return null;
+  }
 
   return (
     <div className={usersPage.pageContainer}>

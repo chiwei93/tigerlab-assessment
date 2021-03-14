@@ -1,0 +1,78 @@
+.container {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  grid-gap: 1rem;
+}
+
+.container:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.image {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.infoContainer {
+  font-size: 0.8rem;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.date {
+  font-size: 0.65rem;
+  color: #747d8c;
+  margin-top: 0.3rem;
+}
+
+.comment {
+  margin-top: 0.6rem;
+}
+
+.btnContainer {
+  margin-top: 0.8rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #a4b0be;
+}
+
+.btnLike {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.btnLike:hover {
+  transform: scale(1.1);
+}
+
+.icon {
+  font-size: 1rem;
+  margin-right: 0.6rem;
+}
+
+.icon.spin {
+  animation: likeBtn 0.6s ease-in-out;
+}
+
+.btnLike.liked .icon {
+  color: #ff4757;
+}
+
+@keyframes likeBtn {
+  0% {
+    transform: translateY(-0.3rem);
+  }
+
+  50% {
+    transform: translateY(-0.3rem) rotateY(270deg);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

@@ -10,7 +10,7 @@ import nextagram from "../api/nextagram";
 import { useGlobalContext } from "./context";
 
 const SignUpForm = () => {
-  const { setIsSignedIn, setLoading } = useGlobalContext();
+  const { setIsSignedIn, setLoading, setCurrentUserId } = useGlobalContext();
 
   const history = useHistory();
 
@@ -36,29 +36,33 @@ const SignUpForm = () => {
         setAvailability(response.data.valid);
 
         //notify user
-        toast.success("Username is available", {
-          position: "top-right",
-          autoClose: false,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        if (response.data.valid === true) {
+          toast.success("Username is available", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+        }
       } catch (error) {
         setAvailability(false);
       }
     };
 
+    if (username.value.length < 5) return;
+
     //set timer to make api call
     timerRef.current = setTimeout(() => {
       fetchData();
-    }, 200);
+    }, 300);
   };
 
   //for username input
   const onUsernameInputChange = (event) => {
-    const input = event.target.value;
+    const input = event.target.value.trim();
 
     const isValid = checkUsername(input);
 
@@ -69,7 +73,7 @@ const SignUpForm = () => {
 
   //for email input
   const onEmailInputChange = (event) => {
-    const input = event.target.value;
+    const input = event.target.value.trim();
 
     const isValid = checkEmail(input);
 
@@ -78,7 +82,7 @@ const SignUpForm = () => {
 
   //for password input
   const onPasswordInputChange = (event) => {
-    const input = event.target.value;
+    const input = event.target.value.trim();
 
     const isValid = checkPassword(input);
 
@@ -96,9 +100,14 @@ const SignUpForm = () => {
 
       const { auth_token } = response.data;
 
+      const { id } = response.data.user;
+
       setIsSignedIn(true);
+      setCurrentUserId(id);
 
       localStorage.setItem("auth_token", auth_token);
+
+      localStorage.setItem("currentUserId", id);
 
       toast.success("You had successfully signed up!", {
         position: "top-right",

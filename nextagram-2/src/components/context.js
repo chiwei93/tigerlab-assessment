@@ -11,6 +11,8 @@ export const AppProvider = ({ children }) => {
 
   const [showDropdown, setShowDropdown] = useState(false);
 
+  const [currentUserId, setCurrentUserId] = useState(null);
+
   return (
     <AppContext.Provider
       value={{
@@ -22,6 +24,8 @@ export const AppProvider = ({ children }) => {
         setIsSignUpPage,
         showDropdown,
         setShowDropdown,
+        currentUserId,
+        setCurrentUserId,
       }}
     >
       {children}

@@ -7,7 +7,7 @@ import UploadForm from "../components/UploadForm";
 import uploadModal from "./UploadModal.module.css";
 
 const UploadPage = () => {
-  const { setIsSignedIn } = useGlobalContext();
+  const { setIsSignedIn, isSignedIn } = useGlobalContext();
 
   const history = useHistory();
 
@@ -19,6 +19,11 @@ const UploadPage = () => {
       setIsSignedIn(true);
     }
   }, []);
+
+  if (!isSignedIn) {
+    history.push("/error");
+    return null;
+  }
 
   //render modal as sibling to root
   return ReactDOM.createPortal(

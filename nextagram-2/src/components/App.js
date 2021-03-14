@@ -8,6 +8,7 @@ import ProfilePage from "../pages/ProfilePage";
 import UploadModal from "../pages/UploadModal";
 import UsersPage from "../pages/UsersPage";
 import SingleUserPage from "../pages/SingleUserPage";
+import SingleImagePage from "../pages/SingleImagePage";
 import ErrorPage from "../pages/ErrorPage";
 import AboutPage from "../pages/AboutPage";
 import PrivacyPage from "../pages/PrivacyPage";
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/profile" component={ProfilePage} />
           <Route path="/upload_photo" component={UploadModal} />
           <Route path="/users/:id" component={SingleUserPage} />
+          <Route path="/image/:id" component={SingleImagePage} />
           <Route path="/users" component={UsersPage} />
           <Route path="/error" component={ErrorPage} />
           <Route path="/about" component={AboutPage} />
