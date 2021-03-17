@@ -1,0 +1,38 @@
+.header {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 2rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+}
+
+.cart-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-icon {
+  font-size: 2.5rem;
+}
+
+.cart-number {
+  background-color: var(--color-remove-text-hover);
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -40%;
+  right: -40%;
+  font-weight: bold;
+}

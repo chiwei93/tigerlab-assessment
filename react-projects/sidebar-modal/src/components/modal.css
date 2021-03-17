@@ -1,0 +1,40 @@
+.overlay {
+  background-color: rgba(34, 34, 34, 0.5);
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+.overlay.active {
+  display: flex;
+}
+
+.modal {
+  background-color: white;
+  width: 70vw;
+  height: 30vh;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.btn-close-modal {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  outline: none;
+}

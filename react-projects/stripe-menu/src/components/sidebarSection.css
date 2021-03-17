@@ -1,0 +1,42 @@
+@media only screen and (max-width: 50em) {
+  .sidebar-section-container {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  .sidebar-header {
+    margin-bottom: 1rem;
+  }
+
+  .sidebar-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .sidebar-item {
+    width: 50%;
+    padding: 0.8rem 0.3rem;
+    transition: all 0.6s;
+  }
+
+  .sidebar-item:hover {
+    background-color: var(--color-gray);
+  }
+
+  .sidebar-item:hover .sidebar-link {
+    color: var(--color-white);
+  }
+
+  .sidebar-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-gray);
+    width: 100%;
+  }
+
+  .sidebar-text {
+    margin-left: 1.5rem;
+    text-transform: capitalize;
+  }
+}

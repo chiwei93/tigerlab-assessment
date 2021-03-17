@@ -1,0 +1,53 @@
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.btn-toggle {
+  color: var(--color-btn-toggle);
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  outline: none;
+  cursor: pointer;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  animation: scaleUpDown 2s infinite ease-in-out;
+}
+
+.btn-modal {
+  text-transform: uppercase;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+  background-color: var(--color-btn-modal);
+  color: white;
+  border-radius: 0.3rem;
+  border: 2px solid var(--color-btn-modal);
+  outline: none;
+  transition: all 0.5s;
+  font-size: 1.1rem;
+  margin-bottom: 4rem;
+}
+
+.btn-modal:hover {
+  background-color: transparent;
+  color: var(--color-btn-modal);
+}
+
+@keyframes scaleUpDown {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

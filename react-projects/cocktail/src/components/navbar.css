@@ -1,0 +1,42 @@
+.nav {
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 4rem;
+  position: relative;
+  box-shadow: 0 0.4rem 0.7rem rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 12rem;
+}
+
+.nav-list {
+  display: flex;
+  font-size: 1.4rem;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--color-text);
+  transition: all 0.4s;
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+}
+
+@media only screen and (min-width: 62.5em) {
+  .nav {
+    padding: 1.5rem 6rem;
+  }
+}

@@ -1,0 +1,32 @@
+/* .navbar-item-container {
+  position: relative;
+  padding: 1rem 0;
+}
+
+.navbar-item-container:not(:last-child) {
+  margin-right: 4rem;
+} */
+
+.navbar-item {
+  list-style: none;
+}
+
+.navbar-item:not(:last-child) {
+  margin-right: 4rem;
+}
+
+.navbar-link {
+  font-size: 1.2rem;
+  color: var(--color-white);
+  transition: all 0.4s;
+  text-transform: capitalize;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1rem 0;
+}
+
+.navbar-link:hover {
+  color: var(--color-black);
+}

@@ -1,0 +1,22 @@
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-gray: #4d4d4d;
+  --color-bg: #f1f5f8;
+  --color-text: #617d98;
+  --padding-nav: 5vw;
+  --nav-height: 5rem;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--color-bg);
+}
