@@ -1,0 +1,123 @@
+.pageContainer {
+  padding: 2em 1em;
+}
+
+.heading {
+  font-size: 3rem;
+  color: var(--color-white);
+  font-family: "Merriweather", serif;
+}
+
+.reviewSection {
+  margin-top: 4em;
+  color: var(--color-gray);
+}
+
+.reviewHeading {
+  font-family: "Merriweather", serif;
+  margin-bottom: 1em;
+  font-size: 1.4rem;
+}
+
+.writer {
+  font-size: 0.8rem;
+}
+
+.btnHome {
+  text-decoration: none;
+  color: var(--color-primary);
+  margin-left: 0.5em;
+  position: relative;
+}
+
+.btnHome::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: 0.5s;
+}
+
+.btnHome:hover::after {
+  transform: scaleX(1);
+}
+
+.date {
+  margin-top: 1em;
+  font-size: 0.8rem;
+}
+
+.content {
+  margin-top: 4em;
+  line-height: 1.5;
+  margin-bottom: 4em;
+}
+
+.original {
+  margin-bottom: 5em;
+  font-size: 0.8rem;
+}
+
+.noReviewSection {
+  color: var(--color-gray);
+  min-height: 70vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.noReviewText {
+  margin-top: 3em;
+  align-self: center;
+}
+
+@media only screen and (min-width: 640px) {
+  .reviewSection {
+    font-size: 1.2rem;
+  }
+
+  .reviewHeading {
+    font-size: 1.8rem;
+  }
+
+  .writer {
+    font-size: 1rem;
+  }
+
+  .date {
+    font-size: 1rem;
+  }
+
+  .original {
+    font-size: 1rem;
+  }
+
+  .noReviewText {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .pageContainer {
+    padding: 2em 3em;
+  }
+
+  .content {
+    line-height: 1.7;
+  }
+
+  .noReviewSection {
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .pageContainer {
+    padding: 2em max(8em, 10vw);
+  }
+}

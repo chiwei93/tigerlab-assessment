@@ -1,0 +1,29 @@
+.link {
+  text-decoration: none;
+  color: var(--color-gray);
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: 0.4s;
+}
+
+.link:hover {
+  color: var(--color-white);
+  transform: translateX(1rem);
+}
+
+@media only screen and (min-width: 800px) {
+  .link {
+    font-size: 0.8rem;
+  }
+
+  .link:hover {
+    transform: scale(1.1);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .link {
+    font-size: 0.9rem;
+  }
+}

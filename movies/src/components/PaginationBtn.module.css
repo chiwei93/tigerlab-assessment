@@ -1,0 +1,63 @@
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3em;
+}
+
+.btnEnd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: 0.5s;
+  display: inline-block;
+}
+
+.btnEnd:hover {
+  transform: scale(1.3);
+}
+
+.btnLeft {
+  margin-right: 0.5em;
+}
+
+.btnRight {
+  margin-left: 0.5em;
+}
+
+.btnList {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.btnItem:not(:last-child) {
+  margin-right: 1em;
+}
+
+.btnPage {
+  text-decoration: none;
+  border: 1px solid transparent;
+  width: 3.5em;
+  height: 3.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--color-primary);
+  font-size: 0.7rem;
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+.btnPage:hover {
+  border: 1px solid var(--color-primary);
+}
+
+.btnPage.active {
+  background-color: var(--color-primary);
+  color: var(--color-black);
+}

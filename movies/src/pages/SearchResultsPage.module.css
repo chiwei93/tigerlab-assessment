@@ -1,0 +1,71 @@
+.pageContainer {
+  padding: 2em 1em;
+}
+
+.heading {
+  color: var(--color-white);
+  font-size: 2.5rem;
+  font-family: "Merriweather", serif;
+}
+
+.moviesSection {
+  margin-top: 3em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+}
+
+.noResultsContainer {
+  color: var(--color-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+}
+
+@media only screen and (min-width: 400px) {
+  .moviesSection {
+    grid-template-columns: repeat(auto-fit, minmax(11em, 1fr));
+    grid-gap: 1em;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .heading {
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .noResultsContainer {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .pageContainer {
+    padding: 2em 3em;
+  }
+
+  .noResultsContainer {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .moviesSection {
+    grid-template-columns: repeat(auto-fit, minmax(13em, 1fr));
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .moviesSection {
+    grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .pageContainer {
+    padding: 2em max(8em, 10vw);
+  }
+}

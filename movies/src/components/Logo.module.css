@@ -1,0 +1,22 @@
+.logoContainer {
+  font-weight: bold;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.firstLetter {
+  font-size: 1.3rem;
+}
+
+.letters {
+}
+
+@media only screen and (min-width: 900px) {
+  .firstLetter {
+    font-size: 1.8rem;
+  }
+
+  .letters {
+    font-size: 1.5rem;
+  }
+}
