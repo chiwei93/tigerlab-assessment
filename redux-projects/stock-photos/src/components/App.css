@@ -1,0 +1,48 @@
+.pageContainer {
+  padding: 2em;
+}
+
+.heading {
+  font-size: 3rem;
+  font-family: "Merriweather", serif;
+  margin-bottom: 0.5em;
+}
+
+.photoSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+  grid-gap: 2em;
+  margin-top: 3em;
+}
+
+@media only screen and (min-width: 900px) {
+  .pageContainer {
+    padding: 2em 4em;
+  }
+
+  .heading {
+    font-size: 4rem;
+  }
+
+  .photoSection {
+    grid-template-columns: repeat(auto-fit, minmax(22em, 1fr));
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .pageContainer {
+    padding: 2em 8em;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .pageContainer {
+    padding: 2em max(8em, 20vw);
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .pageContainer {
+    padding: 2em max(20vw, 30vw);
+  }
+}

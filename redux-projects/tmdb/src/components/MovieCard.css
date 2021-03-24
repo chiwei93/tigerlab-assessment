@@ -1,0 +1,39 @@
+.card {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardImage {
+  width: 100%;
+}
+
+.hoverSection {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  padding: 1em;
+  font-size: 1.3rem;
+  transition: 0.8s;
+  transform: translateY(100%);
+}
+
+.cardImage:hover ~ .hoverSection {
+  transform: translateY(0);
+}
+
+.cardTitle {
+  margin-bottom: 0.5em;
+  font-family: "Merriweather", serif;
+}
+
+@media only screen and (min-width: 640px) {
+  .hoverSection {
+    font-size: 0.8rem;
+  }
+}

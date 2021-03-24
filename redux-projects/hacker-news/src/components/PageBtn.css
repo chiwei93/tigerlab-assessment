@@ -1,0 +1,29 @@
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.btn {
+  all: unset;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  padding: 0.3em 0.6em;
+  border-radius: 0.3em;
+  box-shadow: 0 0.3em 0.8em rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--color-dark-black);
+}
+
+.btnPrev {
+  margin-right: 1em;
+}
+
+.btnNext {
+  margin-left: 1em;
+}

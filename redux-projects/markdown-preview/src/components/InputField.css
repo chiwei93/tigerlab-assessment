@@ -1,0 +1,27 @@
+.inputContainer {
+  margin-top: 2em;
+  flex-grow: 0;
+}
+
+.textarea {
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1rem;
+  font-family: "Merriweather", serif;
+  resize: none;
+  box-shadow: 0 0 0.5em 0.1em rgba(0, 0, 0, 0.1);
+  border-radius: 0.2em;
+  min-height: 15vh;
+  line-height: 1.5;
+}
+
+@media only screen and (min-width: 800px) {
+  .inputContainer {
+    margin-top: 0;
+  }
+
+  .textarea {
+    min-height: 100%;
+    font-size: 1.2rem;
+  }
+}

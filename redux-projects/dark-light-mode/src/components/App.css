@@ -1,0 +1,54 @@
+.pageContainer {
+  padding: 2em 1em;
+  min-width: 100vw;
+  min-height: 100vh;
+  transition: 0.5s;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heading {
+  font-family: "Merriweather", serif;
+  color: var(--color-black);
+  transition: 0.5s;
+  font-size: 2.5rem;
+}
+
+.contentContainer {
+  margin-top: 4em;
+  list-style: none;
+}
+
+.pageContainer.dark {
+  background-color: var(--color-black);
+}
+
+.pageContainer.dark .heading {
+  color: var(--color-white);
+}
+
+@media only screen and (min-width: 500px) {
+  .heading {
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .pageContainer {
+    padding: 2em 5em;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .pageContainer {
+    padding: 2em max(10em, 20vw);
+  }
+
+  .heading {
+    font-size: 4.5rem;
+  }
+}

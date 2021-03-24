@@ -1,0 +1,46 @@
+.cardContainer {
+  background-color: var(--color-white);
+  padding: 1em;
+  border-radius: 0.4em;
+  box-shadow: 0 0.3em 0.8em rgba(0, 0, 0, 0.1);
+}
+
+.cardHeading {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  margin-bottom: 0.5em;
+  color: var(--color-black);
+  font-family: "Merriweather", serif;
+}
+
+.cardComment {
+  color: var(--color-gray);
+  font-size: 0.9rem;
+  margin-bottom: 1em;
+}
+
+.cardBtnContainer {
+  font-size: 0.8rem;
+}
+
+.cardLink {
+  text-decoration: none;
+  color: var(--color-blue);
+  margin-right: 2em;
+  transition: 0.5s;
+}
+
+.cardLink:hover {
+  filter: brightness(0.8);
+}
+
+.btnDelete {
+  all: unset;
+  color: var(--color-red);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.btnDelete:hover {
+  filter: brightness(1.3);
+}

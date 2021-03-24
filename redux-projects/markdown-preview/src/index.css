@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--color-bg);
+}
+
+:root {
+  --color-bg: #f1f5f8;
+  --color-heading: #2f3542;
+  --color-gray: #a4b0be;
+}
+
+/* font-family: 'Merriweather', serif; */

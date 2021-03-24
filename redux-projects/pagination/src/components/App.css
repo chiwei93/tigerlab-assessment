@@ -1,0 +1,81 @@
+.pageContainer {
+  padding: 2em;
+}
+
+.heading {
+  font-family: "Merriweather", serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: min-content;
+  margin: 0 auto;
+}
+
+.heading::after {
+  content: "";
+  width: 30%;
+  height: 3px;
+  background-color: var(--color-blue);
+  transform: translateY(200%);
+}
+
+.cardSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  grid-gap: 2em;
+  margin-top: 3em;
+}
+
+.btnContainer {
+  max-width: 80vw;
+  margin: 3em auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(2em, 1fr));
+  grid-gap: 0.5em;
+}
+
+@media only screen and (min-width: 600px) {
+  .heading {
+    font-size: 3rem;
+  }
+
+  .btnContainer {
+    max-width: 70vw;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .btnContainer {
+    max-width: 60vw;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .btnContainer {
+    max-width: 50vw;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .btnContainer {
+    max-width: 45vw;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .pageContainer {
+    padding: 2em max(10em, 20vw);
+  }
+
+  .btnContainer {
+    max-width: 35vw;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .btnContainer {
+    max-width: 20vw;
+  }
+}

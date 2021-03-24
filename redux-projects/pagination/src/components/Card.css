@@ -1,0 +1,31 @@
+.cardContainer {
+  background-color: var(--color-white);
+  padding: 2em;
+  border-radius: 0.5em;
+  box-shadow: 0 0 1em 0.4em rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.cardImg {
+  width: 50%;
+  border-radius: 50%;
+}
+
+.username {
+  margin: 1em 0;
+  color: var(--color-gray);
+}
+
+.link {
+  text-decoration: none;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  padding: 0.5em 0.8em;
+  border-radius: 0.4em;
+  transition: 0.5s;
+  display: inline-block;
+}
+
+.link:hover {
+  background-color: var(--color-dark-blue);
+}

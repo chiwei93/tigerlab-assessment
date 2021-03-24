@@ -1,0 +1,36 @@
+.pageContainer {
+  padding: 2em 1em;
+}
+
+.heading {
+  color: var(--color-dark-black);
+  font-family: "Merriweather", serif;
+}
+
+.newsSection {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2em;
+}
+
+@media only screen and (min-width: 600px) {
+  .heading {
+    font-size: 3.5rem;
+  }
+
+  .newsSection {
+    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .pageContainer {
+    padding: 2em 4em;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .pageContainer {
+    padding: 2em max(10vw, 20vw);
+  }
+}
